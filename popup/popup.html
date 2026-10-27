@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../icons/icon.svg" alt="" width="20" height="20" />
+      <h1>Jira Deenshittifier</h1>
+    </header>
+
+    <label class="row master">
+      <span>Enabled</span>
+      <input type="checkbox" id="enabled" />
+    </label>
+
+    <label class="row">
+      <span>Highlight instead of hide <small>(for debugging)</small></span>
+      <input type="checkbox" id="highlight" />
+    </label>
+
+    <h2>Remove</h2>
+    <div id="categories"></div>
+
+    <h2>Jira account</h2>
+    <label class="row">
+      <span>Turn off AI acronym highlighting <small>(saved to your Jira account on this site)</small></span>
+      <input type="checkbox" id="noHighlighting" disabled />
+    </label>
+    <p id="highlightingStatus" class="hint"></p>
+
+    <h2>Network</h2>
+    <label class="row">
+      <span>Block tracking &amp; promo requests <small>(analytics, Sentry, in-product promos)</small></span>
+      <input type="checkbox" id="blockTracking" />
+    </label>
+
+    <h2>Custom selectors</h2>
+    <p class="hint">One CSS selector per line. Lines starting with # are ignored.</p>
+    <textarea id="custom" rows="4" spellcheck="false" placeholder='[data-testid="some-ai-thing"]'></textarea>
+    <button id="save">Save selectors</button>
+
+    <p id="status" class="hint"></p>
+
+    <script src="../rules.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

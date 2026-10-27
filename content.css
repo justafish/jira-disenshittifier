@@ -1,0 +1,9 @@
+html:not([data-jde-mode="highlight"]) [data-jde-hidden] {
+  display: none !important;
+}
+
+html[data-jde-mode="highlight"] [data-jde-hidden] {
+  outline: 2px dashed #e5484d !important;
+  outline-offset: 1px !important;
+  background: rgba(229, 72, 77, 0.12) !important;
+}

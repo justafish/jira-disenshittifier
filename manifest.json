@@ -1,0 +1,71 @@
+{
+  "manifest_version": 3,
+  "name": "Jira Deenshittifier",
+  "version": "1.0.0",
+  "description": "Hides Atlassian Intelligence, Rovo and other AI bloat from Jira Cloud.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "tracking",
+        "enabled": true,
+        "path": "rules/tracking.json"
+      }
+    ]
+  },
+  "host_permissions": [
+    "*://*.atlassian.net/*",
+    "*://*.jira.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.atlassian.net/*",
+        "*://*.jira.com/*"
+      ],
+      "js": [
+        "rules.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_title": "Jira Deenshittifier",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "jira-deenshittifier@justa.fish",
+      "strict_min_version": "121.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}

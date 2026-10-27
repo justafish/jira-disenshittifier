@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||as.atlassian.com/api/",
+      "initiatorDomains": ["atlassian.net", "jira.com"],
+      "resourceTypes": ["xmlhttprequest", "ping", "image", "other"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||xp.atlassian.com/v1/rgstr",
+      "initiatorDomains": ["atlassian.net", "jira.com"],
+      "resourceTypes": ["xmlhttprequest", "ping", "image", "other"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||ingest.sentry.io^",
+      "initiatorDomains": ["atlassian.net", "jira.com"],
+      "resourceTypes": ["xmlhttprequest", "ping", "image", "other"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/rest/internal/2/log/safe/",
+      "requestDomains": ["atlassian.net", "jira.com"],
+      "resourceTypes": ["xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/gateway/api/post-office/",
+      "requestDomains": ["atlassian.net", "jira.com"],
+      "resourceTypes": ["xmlhttprequest", "ping", "other"]
+    }
+  }
+]
