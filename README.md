@@ -1,4 +1,4 @@
-# Jira Deenshittifier
+# Jira Disenshittifier
 
 A Firefox and Chrome extension that hides Atlassian Intelligence, Rovo and other AI bloat from Jira Cloud (`*.atlassian.net`, `*.jira.com`).
 
@@ -33,7 +33,7 @@ The same folder works in both browsers.
 
 **Temporary (for development):** open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on…** and pick `manifest.json`. It stays loaded until Firefox restarts.
 
-**Permanent:** zip the folder (`zip -r jira-deenshittifier.zip . -x '.*'`) and either sign it through [addons.mozilla.org](https://addons.mozilla.org/developers/) as an unlisted add-on, or install it unsigned in Firefox Developer Edition / Nightly with `xpinstall.signatures.required` set to `false`.
+**Permanent:** zip the folder (`zip -r jira-disenshittifier.zip . -x '.*'`) and either sign it through [addons.mozilla.org](https://addons.mozilla.org/developers/) as an unlisted add-on, or install it unsigned in Firefox Developer Edition / Nightly with `xpinstall.signatures.required` set to `false`.
 
 If nothing gets hidden, check under `about:addons` → the extension → **Permissions** that it has access to atlassian.net.
 

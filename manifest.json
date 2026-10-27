@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Jira Deenshittifier",
+  "name": "Jira Disenshittifier",
   "version": "1.0.0",
   "description": "Hides Atlassian Intelligence, Rovo and other AI bloat from Jira Cloud.",
   "icons": {
@@ -50,7 +50,7 @@
     }
   ],
   "action": {
-    "default_title": "Jira Deenshittifier",
+    "default_title": "Jira Disenshittifier",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon-16.png",
@@ -59,7 +59,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "jira-deenshittifier@justa.fish",
+      "id": "jira-disenshittifier@justa.fish",
       "strict_min_version": "121.0",
       "data_collection_permissions": {
         "required": [
