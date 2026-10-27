@@ -59,3 +59,4 @@ Request blocking uses `declarativeNetRequest`; `background.js` turns the ruleset
 ## Admins
 
 If you administer the Atlassian org, you can turn off Atlassian Intelligence and Rovo for everyone at admin.atlassian.com. This extension is for users who can't do that.
+# jira-deenshittifier
